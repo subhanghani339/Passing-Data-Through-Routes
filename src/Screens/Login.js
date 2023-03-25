@@ -62,7 +62,7 @@ export default function Login() {
           <br />
 
           <Button variant="contained" onClick={signin}>
-            Submit
+            Login
           </Button>
         </Box>
       </div>

@@ -67,10 +67,9 @@ const Signup = () => {
           value={password}
         />
         <br />
-        <p>{user}</p>
 
         <Button variant="contained" onClick={add}>
-          Submit
+          Sign Up
         </Button>
       </Box>
     </div>
