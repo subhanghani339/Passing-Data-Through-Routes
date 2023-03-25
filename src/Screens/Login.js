@@ -15,7 +15,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const signin = () => {
-    if(loginpassword == location.state.password && loginuser == location.state.user){
+    if(loginpassword == location.state.password && loginuser == location.state.user ){
       navigate('/home',{
         state: {user:loginuser, mail: userEmail}
       })
@@ -40,6 +40,7 @@ export default function Login() {
           <TextField
             id="outlined-basic"
             label="Username"
+            required 
             variant="outlined"
             color="primary"
             style={{ width: "400px", marginBottom: "20px" }}
@@ -53,6 +54,7 @@ export default function Login() {
             id="outlined-basic"
             label="Password"
             type="password"
+            required 
             variant="outlined"
             color="primary"
             style={{ width: "400px", marginBottom: "20px" }}

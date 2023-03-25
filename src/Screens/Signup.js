@@ -12,12 +12,14 @@ const Signup = () => {
   const navigate = useNavigate();
 
   let add = () => {
-    navigate(`/login`, {
-      state: { user : user, password: password, email: email },
-    });
-   
+    if (user == "" || password == "" || email == "") {
+      alert("Please fill the empty fields");
+    } else {
+      navigate(`/login`, {
+        state: { user: user, password: password, email: email },
+      });
+    }
   };
- 
 
   return (
     <div style={{ width: "100%", margin: "auto", height: "100%" }}>
@@ -34,6 +36,7 @@ const Signup = () => {
         <TextField
           id="outlined-basic"
           label="Username"
+          required
           variant="outlined"
           color="primary"
           style={{ width: "400px", marginBottom: "20px" }}
@@ -48,6 +51,7 @@ const Signup = () => {
           id="outlined-basic"
           label="Email"
           type="email"
+          required
           variant="outlined"
           color="primary"
           style={{ width: "400px", marginBottom: "20px" }}
@@ -60,6 +64,7 @@ const Signup = () => {
           id="outlined-basic"
           label="Password"
           type="password"
+          required
           variant="outlined"
           color="primary"
           style={{ width: "400px", marginBottom: "20px" }}
